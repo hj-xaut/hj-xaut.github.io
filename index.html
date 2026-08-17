@@ -1,36 +1,615 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Personal Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HU Jing | Associate Professor</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>Hello, I'm HU Jing</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
 
-    <h2>Researcher / Associate Professor</h2>
+            <div class="logo">
+                HU Jing
+            </div>
 
-    <p>
-        My research interests include
-        Computer Vision, Artificial Intelligence,
-        Visual SLAM and Multimodal Perception.
-    </p>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#research">Research</a>
+                <a href="#publications">Publications</a>
+                <a href="#awards">Awards</a>
+                <a href="#patents">Patents</a>
+                <a href="#activities">Activities</a>
+            </div>
 
-    <h2>Research</h2>
+        </div>
+    </nav>
 
-    <ul>
-        <li>Computer Vision</li>
-        <li>Multimodal AI</li>
-        <li>Visual SLAM</li>
-        <li>Intelligent Navigation</li>
-    </ul>
 
-    <h2>Publications</h2>
+    <!-- Hero -->
+    <section class="hero">
 
-    <p>
-        Coming soon...
-    </p>
+        <div class="hero-content">
+
+            <div class="hero-label">
+                AI · COMPUTER VISION · SLAM
+            </div>
+
+            <h1>
+                HU Jing
+            </h1>
+
+            <h2>
+                Associate Professor
+            </h2>
+
+            <p class="hero-description">
+                Researcher working on Computer Vision,
+                Artificial Intelligence, Visual SLAM,
+                Multimodal Perception and Intelligent Navigation.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#research" class="btn primary">
+                    Explore Research
+                </a>
+
+                <a href="#publications" class="btn secondary">
+                    Publications
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="visual-circle circle-1"></div>
+            <div class="visual-circle circle-2"></div>
+            <div class="visual-circle circle-3"></div>
+
+            <div class="visual-center">
+                AI
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+
+        <div class="section-title">
+            <span>01</span>
+            About Me
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <h2>
+                    Building Intelligent
+                    Visual Perception Systems
+                </h2>
+
+                <p>
+                    I am an Associate Professor working in the field
+                    of Artificial Intelligence and Computer Vision.
+                </p>
+
+                <p>
+                    My research focuses on visual perception,
+                    multimodal learning, visual SLAM,
+                    3D scene understanding and intelligent navigation.
+                </p>
+
+            </div>
+
+            <div class="about-info">
+
+                <div class="info-item">
+                    <span>Position</span>
+                    <strong>Associate Professor</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Research</span>
+                    <strong>Computer Vision & AI</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Location</span>
+                    <strong>Xi'an, China</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Research -->
+    <section id="research" class="section dark-section">
+
+        <div class="section-title">
+            <span>02</span>
+            Research Areas
+        </div>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <div class="card-number">
+                    01
+                </div>
+
+                <h3>
+                    Computer Vision
+                </h3>
+
+                <p>
+                    Image enhancement, object detection,
+                    semantic segmentation and visual representation.
+                </p>
+
+                <div class="tags">
+                    <span>Detection</span>
+                    <span>Segmentation</span>
+                    <span>Enhancement</span>
+                </div>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="card-number">
+                    02
+                </div>
+
+                <h3>
+                    Multimodal AI
+                </h3>
+
+                <p>
+                    RGB-IR fusion, multimodal representation
+                    learning and cross-modal feature interaction.
+                </p>
+
+                <div class="tags">
+                    <span>RGB-IR</span>
+                    <span>Multimodal</span>
+                    <span>Fusion</span>
+                </div>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="card-number">
+                    03
+                </div>
+
+                <h3>
+                    Visual SLAM
+                </h3>
+
+                <p>
+                    Dynamic scene modeling, Gaussian Splatting,
+                    visual localization and dense mapping.
+                </p>
+
+                <div class="tags">
+                    <span>SLAM</span>
+                    <span>3D Vision</span>
+                    <span>Gaussian Splatting</span>
+                </div>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="card-number">
+                    04
+                </div>
+
+                <h3>
+                    Intelligent Navigation
+                </h3>
+
+                <p>
+                    BEV perception, Occupancy prediction,
+                    path planning and autonomous navigation.
+                </p>
+
+                <div class="tags">
+                    <span>BEV</span>
+                    <span>Occupancy</span>
+                    <span>Navigation</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Selected Research -->
+    <section class="section">
+
+        <div class="section-title">
+            <span>03</span>
+            Selected Research
+        </div>
+
+        <div class="featured-project">
+
+            <div class="project-content">
+
+                <div class="project-label">
+                    VISUAL SLAM
+                </div>
+
+                <h2>
+                    Fine-grained Dynamic Scene Modeling
+                </h2>
+
+                <p>
+                    Research on robust dynamic scene modeling
+                    and monocular Gaussian Splatting SLAM,
+                    with uncertainty-aware perception and
+                    fine-grained scene representation.
+                </p>
+
+                <a href="#" class="text-link">
+                    View Research →
+                </a>
+
+            </div>
+
+            <div class="project-visual">
+                <div class="grid-lines"></div>
+                <div class="project-point point-1"></div>
+                <div class="project-point point-2"></div>
+                <div class="project-point point-3"></div>
+                <div class="project-point point-4"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Publications -->
+    <section id="publications" class="section dark-section">
+
+        <div class="section-title">
+            <span>04</span>
+            Publications
+        </div>
+
+        <div class="publication-list">
+
+            <div class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div class="publication-content">
+
+                    <h3>
+                        FineGS: Fine-grained Dynamic Scene Modeling
+                        for Monocular Gaussian Splatting SLAM
+                    </h3>
+
+                    <p>
+                        Research on dynamic scene modeling,
+                        uncertainty-aware representation and SLAM.
+                    </p>
+
+                    <div class="publication-tags">
+                        <span>SLAM</span>
+                        <span>Gaussian Splatting</span>
+                        <span>3D Vision</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="publication">
+
+                <div class="publication-year">
+                    2026
+                </div>
+
+                <div class="publication-content">
+
+                    <h3>
+                        NFA-YOLO: Re-parameterized Large-Kernel
+                        Alignment for Efficient Aerial Detection
+                    </h3>
+
+                    <p>
+                        Efficient object detection for aerial imagery.
+                    </p>
+
+                    <div class="publication-tags">
+                        <span>Object Detection</span>
+                        <span>UAV</span>
+                        <span>Efficient AI</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Awards -->
+    <section id="awards" class="section">
+
+        <div class="section-title">
+            <span>05</span>
+            Research Awards
+        </div>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2026
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        科技成果奖 / 科研获奖名称
+                    </h3>
+
+                    <p>
+                        Awarding organization · Award level
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2025
+                </div>
+
+                <div class="timeline-content">
+
+                    <h3>
+                        科研成果奖 / 荣誉称号
+                    </h3>
+
+                    <p>
+                        Awarding organization · Award level
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Patents -->
+    <section id="patents" class="section dark-section">
+
+        <div class="section-title">
+            <span>06</span>
+            Patents & Software
+        </div>
+
+        <div class="patent-grid">
+
+            <div class="patent-card">
+
+                <div class="patent-type">
+                    INVENTION PATENT
+                </div>
+
+                <h3>
+                    一种基于人工智能的图像处理方法
+                </h3>
+
+                <p>
+                    Patent No. XXXXXXXX
+                </p>
+
+                <span class="patent-status">
+                    Granted
+                </span>
+
+            </div>
+
+
+            <div class="patent-card">
+
+                <div class="patent-type">
+                    SOFTWARE COPYRIGHT
+                </div>
+
+                <h3>
+                    智能视觉分析软件
+                </h3>
+
+                <p>
+                    Registration No. XXXXXXXX
+                </p>
+
+                <span class="patent-status">
+                    Registered
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Activities -->
+    <section id="activities" class="section">
+
+        <div class="section-title">
+            <span>07</span>
+            Academic Activities
+        </div>
+
+        <div class="activity-grid">
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    01
+                </div>
+
+                <h3>
+                    Academic Conferences
+                </h3>
+
+                <p>
+                    Participation in international and domestic
+                    academic conferences, workshops and forums.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    02
+                </div>
+
+                <h3>
+                    Research Collaboration
+                </h3>
+
+                <p>
+                    Research collaboration with universities,
+                    research institutes and industry partners.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    03
+                </div>
+
+                <h3>
+                    Technology Transfer
+                </h3>
+
+                <p>
+                    Promoting the application of AI technologies
+                    in real-world engineering and social services.
+                </p>
+
+            </div>
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+                    04
+                </div>
+
+                <h3>
+                    Science Communication
+                </h3>
+
+                <p>
+                    Sharing research achievements through
+                    public science communication and media.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact-section">
+
+        <div class="contact-content">
+
+            <div class="section-title">
+                Contact
+            </div>
+
+            <h2>
+                Let's build intelligent
+                visual systems together.
+            </h2>
+
+            <p>
+                Interested in research collaboration,
+                academic exchange or joint projects?
+            </p>
+
+            <a href="mailto:your-email@example.com"
+               class="contact-email">
+                your-email@example.com
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div>
+            HU Jing
+        </div>
+
+        <div>
+            AI · Computer Vision · SLAM
+        </div>
+
+        <div>
+            © 2026 HU Jing
+        </div>
+
+    </footer>
+
 
 </body>
 </html>
+```
