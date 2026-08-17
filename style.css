@@ -20,7 +20,7 @@ body {
         Arial,
         sans-serif;
 
-    background: #FDD3CF;
+    background: #FEE5E2;
     color: #f5f7fa;
     line-height: 1.7;
 }
@@ -47,7 +47,7 @@ section {
     width: 100%;
     height: 72px;
 
-    background: rgba(8, 11, 18, 0.75);
+    background:#FEE5E2;
     backdrop-filter: blur(16px);
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
