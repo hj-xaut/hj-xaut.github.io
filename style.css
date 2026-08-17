@@ -965,47 +965,57 @@ section {
 }
 
 
-/* -----------------------------------------------------
-   Teaching Card
------------------------------------------------------ */
+/* =====================================================
+   TEACHING
+===================================================== */
+
+.teaching-section {
+    padding: 60px 0 80px;
+}
+
+
+/* Three columns */
+
+.teaching-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+
+    margin-top: 35px;
+}
+
+
+/* Course card */
 
 .teaching-card {
-
     background: #ffffff;
 
-    border: 1px solid #e3e7ee;
+    border: 1px solid #e1e5eb;
 
-    border-radius: 8px;
+    border-radius: 6px;
 
     overflow: hidden;
 
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-
+    transition: 0.25s ease;
 }
 
 
 .teaching-card:hover {
-
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 12px 30px
-        rgba(30, 50, 90, 0.10);
-
+        0 10px 25px rgba(30, 50, 90, 0.10);
 }
 
 
-/* -----------------------------------------------------
-   Textbook Cover
------------------------------------------------------ */
+/* Textbook cover */
 
 .course-cover {
+    height: 210px;
 
-    height: 190px;
-
-    background: #f1f4f8;
+    background: #f5f6f8;
 
     display: flex;
 
@@ -1018,58 +1028,26 @@ section {
 
 
 .course-cover img {
-
     width: 100%;
-
     height: 100%;
 
     object-fit: contain;
 
     padding: 15px;
-
-    transition:
-        transform 0.3s ease;
 }
 
 
-.teaching-card:hover
-.course-cover img {
+/* Course information */
 
-    transform: scale(1.04);
-
+.course-info {
+    padding: 20px 22px 22px;
 }
 
 
-/* -----------------------------------------------------
-   Course Content
------------------------------------------------------ */
-
-.course-content {
-
-    padding: 24px 25px 26px;
-
-}
-
-
-.course-label {
-
-    font-size: 11px;
-
-    font-weight: 600;
-
-    letter-spacing: 2px;
-
-    color: #4c6fff;
-
-    margin-bottom: 8px;
-}
-
-
-.course-content h2 {
-
+.course-info h2 {
     margin: 0;
 
-    font-size: 22px;
+    font-size: 20px;
 
     font-weight: 600;
 
@@ -1078,119 +1056,43 @@ section {
 
 
 .course-semester {
-
-    margin-top: 7px;
-
-    font-size: 13px;
-
-    color: #667085;
-
-}
-
-
-.course-content p {
-
-    margin-top: 15px;
-
-    margin-bottom: 20px;
+    margin: 7px 0 16px;
 
     font-size: 14px;
 
-    line-height: 1.7;
-
-    color: #5d6878;
+    color: #667085;
 }
 
 
-/* -----------------------------------------------------
-   Course Links
------------------------------------------------------ */
+/* Links */
 
 .course-links {
-
     display: flex;
 
-    flex-wrap: wrap;
-
-    gap: 8px;
+    gap: 18px;
 }
 
 
-.course-button {
+.course-links a {
+    font-size: 13px;
 
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 8px 13px;
-
-    border-radius: 5px;
-
-    background: #4c6fff;
-
-    color: white;
+    color: #4c6fff;
 
     text-decoration: none;
-
-    font-size: 12px;
-
-    font-weight: 500;
-
-    transition:
-        background 0.2s ease,
-        transform 0.2s ease;
 }
 
 
-.course-button:hover {
-
-    background: #3659d9;
-
-    transform: translateY(-1px);
+.course-links a:hover {
+    text-decoration: underline;
 }
 
 
-.course-button.secondary {
+/* Responsive */
 
-    background: #f3f5f8;
-
-    color: #344054;
-
-    border: 1px solid #dfe3e8;
-}
-
-
-.course-button.secondary:hover {
-
-    background: #e9edf2;
-
-}
-
-
-/* =====================================================
-   RESPONSIVE
-===================================================== */
-
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
 
     .teaching-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-}
-
-
-@media (max-width: 680px) {
-
-    .teaching-grid {
-
         grid-template-columns: 1fr;
-
     }
 
 }
