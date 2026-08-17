@@ -1,55 +1,53 @@
 /* =====================================================
-   GLOBAL
+   RESET
 ===================================================== */
 
 * {
-    box-sizing: border-box;
-
     margin: 0;
-
     padding: 0;
+    box-sizing: border-box;
 }
-
 
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-
     font-family:
-        -apple-system,
-        BlinkMacSystemFont,
         "Segoe UI",
-        "Helvetica Neue",
         Arial,
+        Helvetica,
         sans-serif;
 
-    background: #F7F8FA;
+    background: #f7f8fa;
+    color: #182235;
 
-    color: #172033;
-
-    line-height: 1.65;
-
-    font-weight: 400;
+    line-height: 1.6;
 }
-
 
 a {
-    text-decoration: none;
-
     color: inherit;
+    text-decoration: none;
 }
 
-
 img {
+    display: block;
     max-width: 100%;
 }
 
-
 section {
     scroll-margin-top: 80px;
+}
+
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.container {
+    width: min(1180px, calc(100% - 80px));
+    margin: 0 auto;
 }
 
 
@@ -59,344 +57,176 @@ section {
 ===================================================== */
 
 .navbar {
+    height: 72px;
+
+    background: rgba(247, 248, 250, 0.96);
+
+    border-bottom: 1px solid #e1e5eb;
 
     position: sticky;
-
     top: 0;
 
     z-index: 1000;
-
-    height: 74px;
-
-    background:
-        rgba(247, 248, 250, 0.94);
-
-    backdrop-filter:
-        blur(10px);
-
-    border-bottom:
-        1px solid #E1E5EB;
 }
 
-
 .nav-container {
-
-    max-width: 1200px;
-
+    width: min(1180px, calc(100% - 80px));
     height: 100%;
 
-    margin: auto;
-
-    padding:
-        0 30px;
+    margin: 0 auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
-
 .nav-logo {
-
-    color: #172033;
-
     font-size: 20px;
-
     font-weight: 650;
 
-    letter-spacing: -0.5px;
+    color: #182235;
+
+    letter-spacing: -0.4px;
 }
 
-
 .nav-menu {
-
     display: flex;
-
     align-items: center;
 
     gap: 30px;
 }
 
-
 .nav-menu a {
-
-    color: #657184;
+    color: #667085;
 
     font-size: 13px;
 
-    transition:
-        color 0.2s ease;
+    transition: color 0.2s ease;
 }
-
 
 .nav-menu a:hover {
-
-    color: #3B6FF5;
+    color: #4169e1;
 }
 
 
 
 /* =====================================================
-   HERO
+   SECTION HEADING
 ===================================================== */
 
-.hero {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding:
-        72px 30px
-        58px;
-
-    display: grid;
-
-    grid-template-columns:
-        1.15fr
-        0.85fr;
-
-    align-items: center;
-
-    gap: 45px;
+.section-heading {
+    margin-bottom: 30px;
 }
 
+.section-heading span {
+    display: block;
 
-/* =====================================================
-   HERO LEFT
-===================================================== */
+    margin-bottom: 8px;
 
-.hero-label {
-
-    color: #3B6FF5;
-
-    font-size: 12px;
-
-    font-weight: 650;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 18px;
-}
-
-
-.hero h1 {
-
-    font-size: 68px;
-
-    font-weight: 650;
-
-    line-height: 1;
-
-    letter-spacing: -2.5px;
-
-    color: #172033;
-
-    margin-bottom: 15px;
-}
-
-
-.hero h2 {
-
-    font-size: 24px;
-
-    font-weight: 400;
-
-    color: #4E5B6E;
-
-    margin-bottom: 4px;
-}
-
-
-.hero-affiliation {
-
-    color: #3B6FF5;
-
-    font-size: 15px;
-
-    margin-bottom: 18px;
-}
-
-
-.hero-description {
-
-    max-width: 610px;
-
-    color: #5F6B7A;
-
-    font-size: 15px;
-
-    line-height: 1.8;
-}
-
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-.hero-buttons {
-
-    display: flex;
-
-    gap: 12px;
-
-    margin-top: 24px;
-}
-
-
-.btn {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    height: 44px;
-
-    padding:
-        0 22px;
-
-    border-radius: 7px;
-
-    font-size: 13px;
-
-    transition:
-        all 0.2s ease;
-}
-
-
-.btn.primary {
-
-    background: #4B6FFB;
-
-    color: white;
-}
-
-
-.btn.primary:hover {
-
-    background: #3E5FE4;
-
-    transform:
-        translateY(-1px);
-}
-
-
-.btn.secondary {
-
-    background: white;
-
-    color: #33415C;
-
-    border:
-        1px solid #D7DDE7;
-}
-
-
-.btn.secondary:hover {
-
-    border-color: #4B6FFB;
-
-    color: #3B6FF5;
-}
-
-
-
-/* =====================================================
-   RESEARCH TAGS
-===================================================== */
-
-.hero-tags {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-top: 22px;
-}
-
-
-.hero-tags span {
-
-    padding:
-        4px 9px;
-
-    border:
-        1px solid #DCE5FA;
-
-    border-radius: 4px;
-
-    background: #F3F6FD;
-
-    color: #3B6FF5;
+    color: #4169e1;
 
     font-size: 11px;
 
-    line-height: 1.4;
+    font-weight: 700;
+
+    letter-spacing: 2.5px;
+}
+
+.section-heading h1 {
+    color: #182235;
+
+    font-size: 31px;
+
+    font-weight: 600;
+
+    letter-spacing: -0.7px;
+
+    line-height: 1.3;
+
+    max-width: 720px;
+}
+
+.section-heading p {
+    margin-top: 8px;
+
+    max-width: 720px;
+
+    color: #687386;
+
+    font-size: 14px;
 }
 
 
 
 /* =====================================================
-   HERO RIGHT
+   ABOUT
 ===================================================== */
 
-.hero-right {
+.about-section {
+    padding: 55px 0 65px;
+
+    background: #f7f8fa;
+}
+
+
+/*
+   三列：
+   个人信息 | 教育 | 工作经历
+*/
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        0.9fr
+        0.9fr;
+
+    gap: 16px;
+
+    align-items: stretch;
+}
+
+
+
+/* =====================================================
+   PROFILE CARD
+===================================================== */
+
+.profile-card {
+    min-height: 330px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 10px;
 
     display: flex;
-
-    flex-direction: column;
 
     align-items: center;
 
-    gap: 30px;
+    gap: 25px;
 }
 
+.profile-photo {
+    flex: 0 0 145px;
 
-
-/* =====================================================
-   PHOTO
-===================================================== */
-
-.hero-photo {
-
-    display: flex;
-
-    justify-content: center;
-}
-
-
-.photo-frame {
-
-    width: 175px;
-
-    height: 175px;
+    width: 145px;
+    height: 145px;
 
     padding: 4px;
 
     border-radius: 50%;
 
-    background: #4B6FFB;
-
-    box-shadow:
-        0 12px 30px
-        rgba(59, 111, 245, 0.14);
+    background: #4169e1;
 }
 
-
-.photo-frame img {
-
+.profile-photo img {
     width: 100%;
-
     height: 100%;
-
-    display: block;
 
     object-fit: cover;
 
@@ -405,81 +235,138 @@ section {
     border-radius: 50%;
 }
 
-
-
-/* =====================================================
-   EDUCATION + EXPERIENCE
-===================================================== */
-
-.career-grid {
-
-    width: 100%;
-
-    max-width: 560px;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr
-        1fr;
-
-    gap: 36px;
-}
-
-
-.career-column {
-
+.profile-info {
     min-width: 0;
 }
 
+.profile-info h2 {
+    margin-bottom: 4px;
 
-.career-title {
+    color: #182235;
 
-    margin-bottom: 17px;
+    font-size: 31px;
+
+    font-weight: 650;
+
+    letter-spacing: -1.2px;
+}
+
+.profile-info h3 {
+    margin-bottom: 4px;
+
+    color: #52627a;
+
+    font-size: 17px;
+
+    font-weight: 400;
+}
+
+.affiliation {
+    margin-bottom: 13px;
+
+    color: #4169e1;
+
+    font-size: 12px;
+}
+
+.profile-info > p:not(.affiliation) {
+    color: #687386;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+
+/* =====================================================
+   RESEARCH TAGS
+===================================================== */
+
+.research-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-top: 15px;
+}
+
+.research-tags span {
+    padding: 3px 7px;
+
+    border: 1px solid #dce3f5;
+
+    border-radius: 4px;
+
+    background: #f4f6fb;
+
+    color: #4169e1;
+
+    font-size: 10px;
+}
+
+
+
+/* =====================================================
+   INFO CARD
+===================================================== */
+
+.info-card {
+    min-height: 330px;
+
+    padding: 27px 25px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e5eb;
+
+    border-radius: 10px;
+}
+
+.card-label {
+    margin-bottom: 21px;
 
     padding-bottom: 9px;
 
-    border-bottom:
-        1px solid #DDE3EC;
+    border-bottom: 1px solid #e2e6ec;
 
-    color: #3B6FF5;
+    color: #4169e1;
 
     font-size: 11px;
 
-    font-weight: 650;
+    font-weight: 700;
 
     letter-spacing: 2px;
 }
 
-
-.career-item {
-
-    margin-bottom: 20px;
+.timeline-item {
+    margin-bottom: 21px;
 
     padding-left: 13px;
 
-    border-left:
-        2px solid #E2E8F5;
+    border-left: 2px solid #e2e7f1;
 }
 
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
 
-.career-year {
+.timeline-year {
+    margin-bottom: 3px;
 
-    margin-bottom: 4px;
-
-    color: #3B6FF5;
+    color: #4169e1;
 
     font-size: 11px;
 
-    font-weight: 550;
+    font-weight: 600;
 }
 
-
-.career-item h3 {
-
+.timeline-item h3 {
     margin-bottom: 3px;
 
-    color: #172033;
+    color: #182235;
 
     font-size: 14px;
 
@@ -488,94 +375,12 @@ section {
     line-height: 1.4;
 }
 
+.timeline-item p {
+    color: #687386;
 
-.career-item p {
-
-    margin: 2px 0;
-
-    color: #697586;
-
-    font-size: 12px;
+    font-size: 11.5px;
 
     line-height: 1.5;
-}
-
-
-
-/* =====================================================
-   GENERAL SECTION
-===================================================== */
-
-.section {
-
-    max-width: 1200px;
-
-    margin: auto;
-
-    padding:
-        72px 30px;
-}
-
-
-.section-light {
-
-    max-width: none;
-
-    background: #F0F2F5;
-}
-
-
-.section-light > * {
-
-    max-width: 1140px;
-
-    margin-left: auto;
-
-    margin-right: auto;
-}
-
-
-.section-header {
-
-    margin-bottom: 38px;
-}
-
-
-.section-label {
-
-    margin-bottom: 9px;
-
-    color: #3B6FF5;
-
-    font-size: 11px;
-
-    font-weight: 650;
-
-    letter-spacing: 2.5px;
-}
-
-
-.section-header h2 {
-
-    color: #172033;
-
-    font-size: 32px;
-
-    font-weight: 600;
-
-    letter-spacing: -0.7px;
-
-    margin-bottom: 8px;
-}
-
-
-.section-header p {
-
-    max-width: 650px;
-
-    color: #697586;
-
-    font-size: 14px;
 }
 
 
@@ -584,78 +389,261 @@ section {
    RESEARCH
 ===================================================== */
 
-.research-grid {
+.research-section {
+    padding: 65px 0 75px;
 
+    background: #eef1f5;
+}
+
+.research-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(3, 1fr);
 
-    gap: 15px;
+    gap: 18px;
 }
 
 
+
+/* =====================================================
+   RESEARCH CARD
+===================================================== */
+
 .research-card {
+    padding: 25px;
 
-    padding: 25px 22px;
+    background: #ffffff;
 
-    background: #FFFFFF;
+    border: 1px solid #dfe4eb;
 
-    border:
-        1px solid #E2E6EC;
-
-    border-radius: 8px;
+    border-radius: 10px;
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease;
 }
 
-
 .research-card:hover {
-
-    transform:
-        translateY(-3px);
+    transform: translateY(-4px);
 
     box-shadow:
-        0 10px 25px
-        rgba(20, 35, 60, 0.07);
+        0 12px 30px
+        rgba(24, 34, 53, 0.08);
 }
 
-
 .research-number {
+    margin-bottom: 12px;
 
-    margin-bottom: 18px;
-
-    color: #A4B7E8;
+    color: #a5b5df;
 
     font-size: 11px;
 
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.research-title {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #182235;
+
+    font-size: 20px;
+
     font-weight: 650;
 
-    letter-spacing: 1px;
+    line-height: 1.3;
+
+    transition: color 0.2s ease;
+}
+
+.research-title:hover {
+    color: #4169e1;
+}
+
+.research-intro {
+    margin-bottom: 15px;
+
+    color: #687386;
+
+    font-size: 12px;
+
+    line-height: 1.7;
 }
 
 
-.research-card h3 {
 
-    margin-bottom: 8px;
+/* =====================================================
+   RESEARCH TOPICS
+===================================================== */
 
-    color: #172033;
+.research-topics {
+    display: flex;
 
-    font-size: 17px;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 18px;
+}
+
+.research-topics span {
+    padding: 4px 7px;
+
+    background: #f4f6fa;
+
+    border: 1px solid #e2e6ec;
+
+    border-radius: 4px;
+
+    color: #59677c;
+
+    font-size: 10px;
+}
+
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-box {
+    overflow: hidden;
+
+    margin-top: 8px;
+
+    background: #edf0f4;
+
+    border-radius: 6px;
+}
+
+.video-box video {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    background: #dfe3e8;
+}
+
+.video-caption {
+    padding: 7px 10px;
+
+    color: #7b8492;
+
+    font-size: 10px;
+}
+
+.more-link {
+    display: inline-block;
+
+    margin-top: 14px;
+
+    color: #4169e1;
+
+    font-size: 11px;
 
     font-weight: 600;
 }
 
+.more-link:hover {
+    text-decoration: underline;
+}
 
-.research-card p {
 
-    color: #697586;
 
-    font-size: 12.5px;
+/* =====================================================
+   RESEARCH DETAILS
+===================================================== */
 
-    line-height: 1.65;
+.research-details {
+    background: #ffffff;
+
+    border-top: 1px solid #e1e5eb;
+}
+
+.detail-block {
+    width: min(1000px, calc(100% - 80px));
+
+    margin: 0 auto;
+
+    padding: 55px 0;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr;
+
+    gap: 25px;
+
+    border-bottom: 1px solid #e6e9ee;
+}
+
+.detail-number {
+    color: #a8b6d8;
+
+    font-size: 22px;
+
+    font-weight: 700;
+}
+
+.detail-label {
+    margin-bottom: 6px;
+
+    color: #4169e1;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.detail-block h2 {
+    margin-bottom: 10px;
+
+    color: #182235;
+
+    font-size: 25px;
+
+    font-weight: 600;
+}
+
+.detail-block p {
+    max-width: 750px;
+
+    color: #687386;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+
+/* =====================================================
+   OTHER SECTIONS
+===================================================== */
+
+.simple-section {
+    padding: 70px 0;
+
+    background: #f7f8fa;
+}
+
+.gray-section {
+    background: #eef1f5;
+}
+
+.coming-soon {
+    color: #7a8493;
+
+    font-size: 13px;
 }
 
 
@@ -664,389 +652,40 @@ section {
    PUBLICATIONS
 ===================================================== */
 
-.publication-list {
-
-    border-top:
-        1px solid #DDE2E9;
-}
-
-
 .publication-item {
-
     display: grid;
 
-    grid-template-columns:
-        80px
-        1fr;
+    grid-template-columns: 70px 1fr;
 
     gap: 25px;
 
-    padding:
-        23px 0;
+    padding: 20px 0;
 
-    border-bottom:
-        1px solid #DDE2E9;
+    border-top: 1px solid #dfe4ea;
 }
-
 
 .publication-year {
-
-    color: #3B6FF5;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-.publication-content h3 {
-
-    margin-bottom: 7px;
-
-    color: #172033;
-
-    font-size: 16px;
-
-    font-weight: 600;
-
-    line-height: 1.5;
-}
-
-
-.publication-authors {
-
-    margin-bottom: 2px;
-
-    color: #697586;
+    color: #4169e1;
 
     font-size: 12px;
-}
-
-
-.publication-venue {
-
-    color: #8A94A4;
-
-    font-size: 12px;
-}
-
-
-.section-more {
-
-    margin-top: 25px;
-}
-
-
-.section-more a {
-
-    color: #3B6FF5;
-
-    font-size: 13px;
-
-    font-weight: 500;
-}
-
-
-
-/* =====================================================
-   TIMELINE / AWARDS
-===================================================== */
-
-.timeline {
-
-    max-width: 850px;
-
-    border-left:
-        2px solid #DCE3F1;
-}
-
-
-.timeline-item {
-
-    position: relative;
-
-    display: grid;
-
-    grid-template-columns:
-        90px
-        1fr;
-
-    gap: 25px;
-
-    padding:
-        0 0 30px 25px;
-}
-
-
-.timeline-item::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: -6px;
-
-    top: 4px;
-
-    width: 10px;
-
-    height: 10px;
-
-    border-radius: 50%;
-
-    background: #4B6FFB;
-}
-
-
-.timeline-year {
-
-    color: #3B6FF5;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-.timeline-content h3 {
-
-    margin-bottom: 5px;
-
-    color: #172033;
-
-    font-size: 15px;
-
-    font-weight: 600;
-}
-
-
-.timeline-content p {
-
-    color: #697586;
-
-    font-size: 12px;
-}
-
-
-
-/* =====================================================
-   PATENTS
-===================================================== */
-
-.patent-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 15px;
-}
-
-
-.patent-card {
-
-    padding: 23px;
-
-    background: #FFFFFF;
-
-    border:
-        1px solid #E1E5EB;
-
-    border-radius: 8px;
-}
-
-
-.patent-type {
-
-    margin-bottom: 13px;
-
-    color: #3B6FF5;
-
-    font-size: 10px;
 
     font-weight: 650;
-
-    letter-spacing: 1.5px;
 }
 
-
-.patent-card h3 {
-
-    margin-bottom: 8px;
-
-    color: #172033;
-
-    font-size: 15px;
-
-    font-weight: 600;
-
-    line-height: 1.5;
-}
-
-
-.patent-card p {
-
-    color: #697586;
-
-    font-size: 12px;
-}
-
-
-
-/* =====================================================
-   ACTIVITIES
-===================================================== */
-
-.activity-list {
-
-    max-width: 900px;
-
-    border-top:
-        1px solid #E1E5EB;
-}
-
-
-.activity-item {
-
-    display: grid;
-
-    grid-template-columns:
-        90px
-        1fr;
-
-    gap: 25px;
-
-    padding:
-        22px 0;
-
-    border-bottom:
-        1px solid #E1E5EB;
-}
-
-
-.activity-date {
-
-    color: #3B6FF5;
-
-    font-size: 13px;
-
-    font-weight: 600;
-}
-
-
-.activity-content h3 {
-
+.publication-item h3 {
     margin-bottom: 4px;
 
-    color: #172033;
+    color: #182235;
 
     font-size: 15px;
 
     font-weight: 600;
 }
 
+.publication-item p {
+    color: #727d8c;
 
-.activity-content p {
-
-    color: #697586;
-
-    font-size: 12px;
-}
-
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact-section {
-
-    background: #172033;
-
-    color: white;
-
-    padding:
-        60px 30px;
-}
-
-
-.contact-container {
-
-    max-width: 1140px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 40px;
-}
-
-
-.contact-section .section-label {
-
-    color: #8EA9FF;
-}
-
-
-.contact-section h2 {
-
-    margin-bottom: 10px;
-
-    font-size: 30px;
-
-    font-weight: 600;
-}
-
-
-.contact-section p {
-
-    max-width: 600px;
-
-    color: #B7C0CF;
-
-    font-size: 13px;
-}
-
-
-.contact-links {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 10px;
-}
-
-
-.contact-links a {
-
-    padding:
-        8px 15px;
-
-    border:
-        1px solid #46536A;
-
-    border-radius: 5px;
-
-    color: #DCE3F0;
-
-    font-size: 12px;
-
-    transition:
-        all 0.2s ease;
-}
-
-
-.contact-links a:hover {
-
-    border-color: #8EA9FF;
-
-    color: white;
+    font-size: 11px;
 }
 
 
@@ -1056,49 +695,13 @@ section {
 ===================================================== */
 
 .footer {
+    padding: 22px 0;
 
-    background: #111827;
+    background: #172033;
 
-    color: #7F8999;
-
-    padding:
-        22px 30px;
-}
-
-
-.footer-container {
-
-    max-width: 1140px;
-
-    margin: auto;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-
-.footer p {
+    color: #aeb7c6;
 
     font-size: 11px;
-}
-
-
-.footer a {
-
-    color: #AAB4C4;
-
-    font-size: 11px;
-}
-
-
-.footer a:hover {
-
-    color: white;
 }
 
 
@@ -1107,237 +710,85 @@ section {
    RESPONSIVE
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
-
-    .hero {
-
+    .about-grid {
         grid-template-columns:
-            1fr;
-
-        padding-top: 60px;
-
-        text-align: center;
+            1fr 1fr;
     }
 
-
-    .hero-content {
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: center;
+    .profile-card {
+        grid-column: 1 / -1;
     }
-
-
-    .hero-description {
-
-        max-width: 700px;
-    }
-
-
-    .hero-right {
-
-        margin-top: 15px;
-    }
-
-
-    .career-grid {
-
-        max-width: 650px;
-
-        text-align: left;
-    }
-
 
     .research-grid {
-
         grid-template-columns:
-            repeat(2, 1fr);
+            1fr 1fr;
     }
-
-
-    .contact-container {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
 }
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 720px) {
 
-
-    /* Navigation */
+    .container,
+    .nav-container {
+        width: calc(100% - 40px);
+    }
 
     .navbar {
-
         height: auto;
 
-        min-height: 64px;
+        padding: 15px 0;
     }
-
 
     .nav-container {
-
-        padding:
-            12px 20px;
-
         flex-direction: column;
 
-        gap: 10px;
+        gap: 12px;
     }
 
-
     .nav-menu {
-
-        gap: 15px;
-
         flex-wrap: wrap;
 
         justify-content: center;
+
+        gap: 14px;
     }
 
-
-    .nav-menu a {
-
-        font-size: 11px;
+    .about-section,
+    .research-section,
+    .simple-section {
+        padding: 45px 0;
     }
 
-
-    /* Hero */
-
-    .hero {
-
-        padding:
-            50px 20px
-            45px;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 
-
-    .hero h1 {
-
-        font-size: 52px;
-
-        letter-spacing: -2px;
-    }
-
-
-    .hero h2 {
-
-        font-size: 21px;
-    }
-
-
-    .hero-description {
-
-        font-size: 14px;
-    }
-
-
-    .photo-frame {
-
-        width: 155px;
-
-        height: 155px;
-    }
-
-
-    .career-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 28px;
-    }
-
-
-    /* Sections */
-
-    .section {
-
-        padding:
-            55px 20px;
-    }
-
-
-    .section-header h2 {
-
-        font-size: 27px;
-    }
-
-
-    /* Research */
-
-    .research-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-
-
-    /* Publications */
-
-    .publication-item {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 5px;
-    }
-
-
-    /* Awards */
-
-    .timeline-item {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 3px;
-    }
-
-
-    /* Patents */
-
-    .patent-grid {
-
-        grid-template-columns:
-            1fr;
-    }
-
-
-    /* Activities */
-
-    .activity-item {
-
-        grid-template-columns:
-            1fr;
-
-        gap: 3px;
-    }
-
-
-    /* Contact */
-
-    .contact-section {
-
-        padding:
-            50px 20px;
-    }
-
-
-    /* Footer */
-
-    .footer-container {
+    .profile-card {
+        grid-column: auto;
 
         flex-direction: column;
 
         align-items: flex-start;
     }
 
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-block {
+        width: calc(100% - 40px);
+
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .publication-item {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
 }
