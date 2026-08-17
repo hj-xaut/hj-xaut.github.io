@@ -43,12 +43,9 @@ section {
 ===================================================== */
 
 .container {
-    width: min(1180px, calc(100% - 80px));
-
+    width: min(1400px, calc(100% - 48px));
     margin: 0 auto;
 }
-
-
 
 /* =====================================================
    NAVIGATION
@@ -69,16 +66,12 @@ section {
 }
 
 .nav-container {
-    width: min(1180px, calc(100% - 80px));
-
+    width: min(1400px, calc(100% - 48px));
     height: 100%;
-
     margin: 0 auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
@@ -595,7 +588,7 @@ section {
 }
 
 .detail-block {
-    width: min(1000px, calc(100% - 80px));
+    width: min(1200px, calc(100% - 48px));
 
     margin: 0 auto;
 
