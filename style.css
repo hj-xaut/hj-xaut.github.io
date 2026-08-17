@@ -1,4 +1,3 @@
-```css
 /* =========================================
    GLOBAL
 ========================================= */
@@ -21,7 +20,7 @@ body {
         Arial,
         sans-serif;
 
-    background: #080b12;
+    background: #FDD3CF;
     color: #f5f7fa;
     line-height: 1.7;
 }
@@ -225,77 +224,186 @@ section {
 
 
 /* =========================================
-   HERO VISUAL
+   EDUCATION
 ========================================= */
 
-.hero-visual {
-    height: 500px;
-
+.hero-education {
     position: relative;
 
-    display: flex;
+    padding-left: 35px;
 
-    align-items: center;
+    max-width: 480px;
 
-    justify-content: center;
+    margin-left: auto;
 }
 
-.visual-circle {
-    position: absolute;
+.education-title {
+    color: #5b8cff;
 
-    border-radius: 50%;
-
-    border: 1px solid rgba(91, 140, 255, 0.25);
-}
-
-.circle-1 {
-    width: 420px;
-    height: 420px;
-}
-
-.circle-2 {
-    width: 300px;
-    height: 300px;
-
-    border-color:
-        rgba(139, 92, 246, 0.35);
-}
-
-.circle-3 {
-    width: 180px;
-    height: 180px;
-
-    border-color:
-        rgba(91, 140, 255, 0.5);
-}
-
-.visual-center {
-    width: 110px;
-    height: 110px;
-
-    border-radius: 50%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 30px;
+    font-size: 13px;
 
     font-weight: 700;
 
+    letter-spacing: 3px;
+
+    margin-bottom: 35px;
+}
+
+
+/* Timeline vertical line */
+
+.education-timeline {
+    position: relative;
+
+    padding-left: 35px;
+}
+
+.education-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 5px;
+
+    top: 8px;
+
+    bottom: 8px;
+
+    width: 1px;
+
     background:
         linear-gradient(
-            135deg,
+            to bottom,
             #5b8cff,
-            #8b5cf6
+            #8b5cf6,
+            rgba(139, 92, 246, 0.1)
         );
+}
+
+
+/* Individual education */
+
+.education-item {
+    position: relative;
+
+    margin-bottom: 55px;
+}
+
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Timeline dot */
+
+.education-dot {
+    position: absolute;
+
+    left: -35px;
+
+    top: 5px;
+
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #5b8cff;
+
+    border: 2px solid #080b12;
 
     box-shadow:
-        0 0 60px
-        rgba(91, 140, 255, 0.35);
+        0 0 15px
+        rgba(91, 140, 255, 0.8);
 }
+
+
+/* Year */
+
+.education-year {
+    color: #5b8cff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+/* University */
+
+.education-content h3 {
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    margin-bottom: 8px;
+}
+
+
+/* Degree */
+
+.education-degree {
+    color: #dbe2ea;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+/* Major */
+
+.education-major {
+    color: #8994a3;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* Hover */
+
+.education-item {
+    transition: 0.3s;
+}
+
+.education-item:hover {
+    transform: translateX(6px);
+}
+
+.education-item:hover .education-dot {
+    box-shadow:
+        0 0 25px
+        rgba(91, 140, 255, 1);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .hero-education {
+        margin-left: 0;
+
+        padding-left: 0;
+
+        max-width: 100%;
+    }
+
+    .education-timeline {
+        padding-left: 30px;
+    }
+
+}
+```
+
 
 
 /* =========================================
