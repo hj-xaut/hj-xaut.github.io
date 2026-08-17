@@ -109,86 +109,70 @@ section {
 ========================================= */
 
 .hero {
-    min-height: 100vh;
-
     max-width: 1200px;
 
     margin: auto;
 
     padding:
-        160px 30px
-        100px;
+        105px 30px
+        65px;
 
     display: grid;
 
     grid-template-columns:
-        1.1fr
-        0.9fr;
+        1.25fr
+        0.75fr;
 
     align-items: center;
 
-    gap: 60px;
-
-    position: relative;
+    gap: 50px;
 }
 
 
-/* subtle blue light */
-
-.hero::before {
-    content: "";
-
-    position: absolute;
-
-    width: 500px;
-    height: 500px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(59, 111, 245, 0.08),
-            transparent 70%
-        );
-
-    top: 100px;
-    left: -150px;
-
-    pointer-events: none;
-}
+/* =========================================
+   HERO LEFT
+========================================= */
 
 .hero-label {
     color: #3B6FF5;
 
-    font-size: 13px;
+    font-size: 12px;
 
     font-weight: 700;
 
     letter-spacing: 3px;
 
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero h1 {
-    font-size:
-        clamp(60px, 8vw, 110px);
+    font-size: 76px;
 
     line-height: 1;
 
-    margin-bottom: 20px;
+    letter-spacing: -3px;
 
-    letter-spacing: -4px;
+    margin-bottom: 15px;
 
     color: #172033;
 }
 
 .hero h2 {
-    color: #4E5B6E;
-
     font-size: 24px;
 
     font-weight: 400;
 
-    margin-bottom: 25px;
+    color: #4E5B6E;
+
+    margin-bottom: 4px;
+}
+
+.hero-affiliation {
+    color: #3B6FF5;
+
+    font-size: 15px;
+
+    margin-bottom: 20px;
 }
 
 .hero-description {
@@ -196,92 +180,92 @@ section {
 
     color: #5F6B7A;
 
-    font-size: 18px;
+    font-size: 16px;
+
+    line-height: 1.8;
 }
+
+
+/* =========================================
+   BUTTONS
+========================================= */
 
 .hero-buttons {
     display: flex;
 
-    gap: 15px;
+    gap: 12px;
 
-    margin-top: 35px;
+    margin-top: 25px;
 }
 
 
 /* =========================================
-   BUTTON
+   RESEARCH TAGS
 ========================================= */
 
-.btn {
+.hero-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+.hero-tags span {
     padding:
-        13px 24px;
+        5px 11px;
 
-    border-radius: 8px;
+    border-radius: 5px;
 
-    font-size: 14px;
+    background: #EEF3FF;
 
-    transition: 0.3s;
-}
+    color: #3B6FF5;
 
-.btn.primary {
-    background: #3B6FF5;
-
-    color: white;
-}
-
-.btn.primary:hover {
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 10px 30px
-        rgba(59, 111, 245, 0.22);
-}
-
-.btn.secondary {
-    border:
-        1px solid #D9DFE8;
-
-    color: #344054;
-
-    background: #FFFFFF;
-}
-
-.btn.secondary:hover {
-    background: #F0F3F8;
+    font-size: 12px;
 }
 
 
 /* =========================================
-   HERO PHOTO
+   RIGHT SIDE
+========================================= */
+
+.hero-right {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+}
+
+
+/* =========================================
+   PHOTO
 ========================================= */
 
 .hero-photo {
     display: flex;
-    align-items: center;
+
     justify-content: center;
 }
 
-
-/* 圆形头像 */
-
 .photo-frame {
-    width: 220px;
-    height: 220px;
+    width: 180px;
+    height: 180px;
+
+    padding: 4px;
 
     border-radius: 50%;
-
-    padding: 5px;
 
     background: #3B6FF5;
 
     box-shadow:
-        0 15px 35px
+        0 12px 30px
         rgba(59, 111, 245, 0.15);
 }
-
-
-/* 图片 */
 
 .photo-frame img {
     width: 100%;
@@ -289,11 +273,69 @@ section {
 
     display: block;
 
-    border-radius: 50%;
-
     object-fit: cover;
 
     object-position: center top;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   EDUCATION
+========================================= */
+
+.hero-education {
+    width: 100%;
+
+    max-width: 390px;
+}
+
+.education-title {
+    color: #3B6FF5;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.education-item {
+    padding-left: 18px;
+
+    margin-bottom: 20px;
+
+    border-left:
+        2px solid #DCE5FA;
+}
+
+.education-year {
+    color: #3B6FF5;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 3px;
+}
+
+.education-content h3 {
+    color: #172033;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.education-content p {
+    color: #697586;
+
+    font-size: 13px;
+
+    line-height: 1.5;
 }
 
 /* =========================================
