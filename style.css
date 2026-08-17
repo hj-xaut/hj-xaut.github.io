@@ -807,3 +807,136 @@ section {
     }
 
 }
+
+/* =====================================================
+   GLOBAL FONT SIZE BOOST
+===================================================== */
+
+/* Navigation */
+.nav-logo {
+    font-size: 23px;
+}
+
+.nav-menu a {
+    font-size: 15px;
+}
+
+
+/* Section titles */
+.section-heading span {
+    font-size: 13px;
+}
+
+.section-heading h1 {
+    font-size: 34px;
+}
+
+.section-heading p {
+    font-size: 15px;
+}
+
+
+/* Profile */
+.profile-header h2 {
+    font-size: 35px;
+}
+
+.profile-card h3 {
+    font-size: 19px;
+}
+
+.affiliation {
+    font-size: 14px;
+}
+
+.profile-description {
+    font-size: 14px;
+}
+
+
+/* Tags */
+.research-tags span {
+    font-size: 12px;
+}
+
+
+/* Education / Experience */
+.card-label {
+    font-size: 13px;
+}
+
+.timeline-year {
+    font-size: 14px;
+}
+
+.timeline-item h3 {
+    font-size: 18px;
+}
+
+.timeline-item p {
+    font-size: 14px;
+}
+
+
+/* Research cards */
+.research-number {
+    font-size: 13px;
+}
+
+.research-title {
+    font-size: 23px;
+}
+
+.research-intro {
+    font-size: 14px;
+}
+
+.research-topics span {
+    font-size: 12px;
+}
+
+.video-caption {
+    font-size: 12px;
+}
+
+.more-link {
+    font-size: 13px;
+}
+
+
+/* Research details */
+.detail-number {
+    font-size: 25px;
+}
+
+.detail-label {
+    font-size: 12px;
+}
+
+.detail-block h2 {
+    font-size: 28px;
+}
+
+.detail-block p {
+    font-size: 15px;
+}
+
+
+/* Publications */
+.publication-year {
+    font-size: 14px;
+}
+
+.publication-item h3 {
+    font-size: 18px;
+}
+
+.publication-item p {
+    font-size: 13px;
+}
+
+
+/* Footer */
+.footer {
+    font-size: 13px;
+}
