@@ -1,0 +1,101 @@
+---
+import { profile, education, experience } from '../data/profile';
+import { researchAreas } from '../data/research';
+import { googleScholarUrl } from '../data/publications';
+
+const academicTrack = [
+  ...education.map((item) => ({ ...item, kind: 'Education' })),
+  ...experience.map((item) => ({ ...item, kind: 'Experience' }))
+];
+---
+<section id="about" class="spotlight-section section-anchor" data-section="about">
+  <div class="shell">
+    <div class="spotlight-card">
+      <div class="spotlight-copy">
+        <div class="spotlight-status">
+          <span class="spotlight-status-dot" aria-hidden="true"></span>
+          <strong>{profile.role}</strong>
+          <span class="spotlight-status-separator" aria-hidden="true">/</span>
+          <span>{profile.affiliation}</span>
+        </div>
+
+        <div class="spotlight-heading">
+          <p class="spotlight-kicker">Academic profile</p>
+          <h1>{profile.name}</h1>
+          <p class="spotlight-field">Artificial Intelligence <span>&amp;</span> Computer Vision</p>
+        </div>
+
+        <p class="spotlight-description">{profile.description}</p>
+
+        <div class="spotlight-tags" aria-label="Research interests">
+          {profile.tags.map((tag) => <span>{tag}</span>)}
+        </div>
+
+        <div class="spotlight-actions">
+          <a class="spotlight-action spotlight-action-primary" href="#research">
+            Explore research <span aria-hidden="true">↓</span>
+          </a>
+          <a class="spotlight-action spotlight-action-secondary" href={googleScholarUrl} target="_blank" rel="noopener noreferrer">
+            Google Scholar <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="spotlight-side" aria-label="Profile summary">
+        <div class="spotlight-person">
+          <figure class="spotlight-portrait">
+            <img src={profile.photo} alt={profile.photoAlt} decoding="async" />
+          </figure>
+
+          <div class="spotlight-person-copy">
+            <span>Current appointment</span>
+            <strong>{profile.role}</strong>
+            <p>{profile.affiliation}</p>
+          </div>
+        </div>
+
+        <div class="spotlight-focus">
+          <div class="spotlight-focus-head">
+            <span>Research focus</span>
+            <small>01 — 03</small>
+          </div>
+
+          <ol>
+            {researchAreas.map((area) => (
+              <li>
+                <a href={area.href}>
+                  <span class="spotlight-focus-number">{area.number}</span>
+                  <span class="spotlight-focus-title">{area.title}</span>
+                  <span class="spotlight-focus-arrow" aria-hidden="true">↗</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </aside>
+    </div>
+
+    <div class="spotlight-path" aria-label="Education and academic experience">
+      <div class="spotlight-path-intro">
+        <span>Academic path</span>
+        <p>Education &amp; Experience</p>
+      </div>
+
+      <div class="spotlight-path-items">
+        {academicTrack.map((item) => (
+          <article class="spotlight-path-item">
+            <div class="spotlight-path-period">{item.period}</div>
+            <div class="spotlight-path-line" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="spotlight-path-copy">
+              <small>{item.kind}</small>
+              <strong>{item.title}</strong>
+              {item.details.map((line) => <p>{line}</p>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

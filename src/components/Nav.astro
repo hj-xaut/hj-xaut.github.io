@@ -1,0 +1,29 @@
+---
+import { navItems } from '../data/site';
+import { googleScholarUrl } from '../data/publications';
+---
+<header class="site-nav" data-site-nav>
+  <div class="shell nav-inner">
+    <a class="brand" href="#about" aria-label="HU Jing home">
+      <span class="brand-copy">
+        <strong>HU Jing</strong>
+        <small>Associate Professor · XAUT</small>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary navigation" data-nav-links>
+      {navItems.map((item) => (
+        <a href={item.href} data-nav-link>{item.label}</a>
+      ))}
+    </nav>
+
+    <div class="nav-actions">
+      <a class="nav-scholar" href={googleScholarUrl} target="_blank" rel="noopener noreferrer">
+        Scholar <span aria-hidden="true">↗</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

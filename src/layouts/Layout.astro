@@ -1,0 +1,34 @@
+---
+import '../styles/global.css';
+import '../styles/site.css';
+import Nav from '../components/Nav.astro';
+import Lightbox from '../components/Lightbox.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'HU Jing | Associate Professor',
+  description = 'Academic homepage of HU Jing, Associate Professor at Xi\'an University of Technology.'
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f7fb" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Nav />
+    <main><slot /></main>
+    <Lightbox />
+    <script>
+      import { initSite } from '../scripts/site';
+      initSite();
+    </script>
+  </body>
+</html>

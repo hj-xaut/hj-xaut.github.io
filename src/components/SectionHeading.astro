@@ -1,0 +1,18 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  inverse?: boolean;
+  compact?: boolean;
+}
+
+const { eyebrow, title, description, inverse = false, compact = false } = Astro.props;
+---
+<div class:list={['section-heading', { inverse, compact }]}>
+  <div class="section-heading-index">{eyebrow}</div>
+  <div class="section-heading-copy">
+    <h2>{title}</h2>
+    {description && <p>{description}</p>}
+  </div>
+</div>

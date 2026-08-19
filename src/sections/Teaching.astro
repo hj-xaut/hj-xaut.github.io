@@ -1,0 +1,24 @@
+---
+import SectionHeading from '../components/SectionHeading.astro';
+import { courses } from '../data/teaching';
+---
+<section id="teaching" class="teaching-section section-anchor" data-section="teaching">
+  <div class="shell">
+    <SectionHeading eyebrow="03 / Teaching" title="Teaching" compact />
+    <div class="teaching-grid">
+      {courses.map((course, index) => (
+        <article class="course-card">
+          <div class="course-number">0{index + 1}</div>
+          <div class="course-cover"><img src={course.image} alt={course.alt} loading="lazy" decoding="async" /></div>
+          <div class="course-copy">
+            <h3>{course.title}</h3>
+            <p>{course.semester}</p>
+            <div class="course-links">
+              {course.links.map((link) => <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <span aria-hidden="true">↗</span></a>)}
+            </div>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

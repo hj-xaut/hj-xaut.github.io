@@ -1,0 +1,80 @@
+---
+import SectionHeading from '../components/SectionHeading.astro';
+import VideoCompare from '../components/VideoCompare.astro';
+import { researchAreas, researchDetails } from '../data/research';
+
+const [featured, ...secondary] = researchAreas;
+---
+<section id="research" class="research-section section-anchor" data-section="research">
+  <div class="shell">
+    <SectionHeading
+      eyebrow="01 / Research"
+      title="Research Areas"
+      description="Research covering visual enhancement, intelligent perception, visual mapping and autonomous navigation."
+      inverse
+    />
+
+    <article class="featured-research">
+      <div class="featured-research-copy">
+        <div class="research-meta"><span>{featured.number}</span><span>Featured direction</span></div>
+        <h3>{featured.title}</h3>
+        <p>{featured.intro}</p>
+        <div class="topic-row">
+          {featured.topics.map((topic) => <span>{topic}</span>)}
+        </div>
+        <a class="text-link inverse" href={featured.href}>Explore research detail <span aria-hidden="true">↘</span></a>
+      </div>
+      <VideoCompare sdr={featured.videos[0]} hdr={featured.videos[1]} caption={featured.caption} />
+    </article>
+
+    <div class="secondary-research-grid">
+      {secondary.map((area) => (
+        <article class="secondary-research-card">
+          <div class="secondary-media">
+            <video controls playsinline preload="metadata">
+              <source src={area.videos[0]} type="video/mp4" />
+              Your browser does not support video.
+            </video>
+          </div>
+          <div class="secondary-copy">
+            <div class="research-meta"><span>{area.number}</span><span>Research direction</span></div>
+            <h3>{area.title}</h3>
+            <p>{area.intro}</p>
+            <div class="topic-row compact">{area.topics.map((topic) => <span>{topic}</span>)}</div>
+            <a class="text-link inverse" href={area.href}>Explore research detail <span aria-hidden="true">↘</span></a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="research-detail-section" aria-label="Research details">
+  <div class="shell detail-stack">
+    {researchDetails.map((detail) => (
+      <article id={detail.id} class="research-detail-block section-anchor">
+        <div class="detail-intro">
+          <div class="detail-index">{detail.number}</div>
+          <div class="detail-label">Research Area</div>
+          <h3>{detail.title}</h3>
+          <p>{detail.description}</p>
+        </div>
+        <div class:list={['detail-media-grid', { single: detail.media.length === 1 }]}>
+          {detail.media.map((media) => (
+            <article class="detail-media-card">
+              <video controls playsinline preload="metadata">
+                <source src={media.src} type="video/mp4" />
+                Your browser does not support video.
+              </video>
+              <div class="detail-media-copy">
+                <span>{media.label}</span>
+                <h4>{media.title}</h4>
+                <p>{media.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

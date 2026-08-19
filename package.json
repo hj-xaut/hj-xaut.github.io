@@ -1,0 +1,18 @@
+{
+  "name": "hu-jing-academic-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:assets": "node ./scripts/sync-assets.mjs",
+    "dev": "npm run sync:assets && astro dev",
+    "build": "npm run sync:assets && astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

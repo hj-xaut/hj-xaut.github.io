@@ -1,0 +1,18 @@
+---
+import SectionHeading from '../components/SectionHeading.astro';
+import MediaRail from '../components/MediaRail.astro';
+import { awards, activities, awardsLead, activitiesLead } from '../data/media';
+---
+<section id="awards" class="showcase-section awards-section section-anchor" data-section="awards">
+  <div class="shell">
+    <SectionHeading eyebrow="04 / Recognition" title="Awards & Honors" description={awardsLead} compact />
+    <MediaRail id="awards-gallery" items={awards} mode="awards" />
+  </div>
+</section>
+
+<section id="activities" class="showcase-section activities-section section-anchor" data-section="activities">
+  <div class="shell">
+    <SectionHeading eyebrow="05 / Community" title="Academic Activities" description={activitiesLead} compact />
+    <MediaRail id="activities-gallery" items={activities} mode="activities" />
+  </div>
+</section>

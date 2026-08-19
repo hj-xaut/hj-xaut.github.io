@@ -1,0 +1,57 @@
+---
+interface Props {
+  sdr: string;
+  hdr: string;
+  caption: string;
+}
+const { sdr, hdr, caption } = Astro.props;
+---
+<div class="compare-module" data-video-compare-box>
+  <div class="video-compare" data-video-compare style="--compare-position:50%;">
+    <video class="compare-video compare-video-sdr" data-compare-sdr muted playsinline preload="metadata">
+      <source src={sdr} type="video/mp4" />
+    </video>
+    <div class="compare-hdr-layer">
+      <video class="compare-video compare-video-hdr" data-compare-hdr muted playsinline preload="metadata">
+        <source src={hdr} type="video/mp4" />
+      </video>
+    </div>
+
+    <span class="compare-label compare-label-sdr">SDR</span>
+    <span class="compare-label compare-label-hdr">HDR</span>
+
+    <div
+      class="compare-drag-surface"
+      data-compare-drag
+      tabindex="0"
+      role="slider"
+      aria-label="SDR and HDR comparison divider"
+      aria-valuemin="0"
+      aria-valuemax="100"
+      aria-valuenow="50"
+      aria-valuetext="50 percent SDR and 50 percent HDR"
+    ></div>
+
+    <div class="compare-divider" aria-hidden="true"><span>↔</span></div>
+
+    <div class="compare-controls">
+      <button type="button" class="compare-control-button" data-compare-play aria-label="Play">
+        <span data-compare-play-icon aria-hidden="true">▶</span>
+      </button>
+      <span class="compare-time" data-compare-time>00:00 / 00:00</span>
+      <input
+        class="compare-progress"
+        data-compare-progress
+        type="range"
+        min="0"
+        max="100"
+        step="0.1"
+        value="0"
+        aria-label="Video progress"
+      />
+      <button type="button" class="compare-control-button compare-center" data-compare-center>Center</button>
+      <button type="button" class="compare-control-button compare-fullscreen" data-compare-fullscreen aria-label="Enter full screen">⛶</button>
+    </div>
+  </div>
+  <p class="media-caption" data-compare-status aria-live="polite">{caption}</p>
+</div>
